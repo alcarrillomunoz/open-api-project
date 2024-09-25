@@ -1,3 +1,4 @@
+/* desktop-first design elements */
 body {
   width: 100%;
   margin: 0;
@@ -40,7 +41,7 @@ h2 {
   width: 100%;
   text-align: center;
 }
-#artistSection{
+#artistSection {
   display: grid;
   justify-content: center;
 }
@@ -63,21 +64,38 @@ h2 {
   justify-content: center;
   margin: auto;
 }
-a {
-  margin: .5em;
+.artContainer {
   width: 30%;
   display: flex;
+  margin: .5em;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+p {
+  text-align: center;
+  margin: .5em;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+}
+a {
+  margin: .5em;
+  width: 80%; 
 }
 a:hover {
   opacity: 50%;
 }
 img {
   width: 100%;
+  justify-content: center;
+
+  vertical-align: middle;
 }
 .backButton {
   border: solid black 2px;
-  float: center;
   text-align: center;
   padding: .25em 1em;
   background-color: black;
@@ -90,4 +108,23 @@ img {
   cursor: pointer;
   margin-top: 1em;
   width: 100%;
+}
+
+/* mobile size media query */
+@media (max-width: 480px) {
+  #top {
+    width: 100%;
+    padding: 0;
+  }
+  #title {
+    font-size: 2.5rem;
+    padding: 1em 0 .5em 0;
+  }
+  #top-h2
+{
+  margin: 0;
+  padding-bottom: 1em;
+}  .artContainer {
+    width: 90%;
+  }
 }
